@@ -1,17 +1,21 @@
 .wrapper {
+    background-color: white;
     font-size: 16px;
+    padding: 3em;
 }
 
 .main {
     display: flex;
     justify-content: space-around;  
-    flex-wrap: wrap;  
+    flex-wrap: wrap; 
+    background-color: white;
 }
 
 .card {
     width: 25em;
     padding: 2em;
     text-align: center;
+    box-shadow: 5px 5px 10px gray;
     border: 1px solid black;
 }
 
