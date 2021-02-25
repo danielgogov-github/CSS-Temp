@@ -1,5 +1,9 @@
+body {
+    margin: 0;
+    background-color: #f5f5f5;
+}
+
 .wrapper {
-    background-color: white;
     font-size: 16px;
     padding: 3em;
 }
@@ -41,4 +45,32 @@
 .card--black {
     background-color: black;
     color: white;
+}
+
+.parent {
+    width: 20em;
+    height: 7.5em;
+    margin: 1em auto;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+
+    border: 1px solid red;
+}
+
+.parent .header, .parent .content, .parent .footer {
+    width: 4em;
+    height: 4em;
+    border: 1px solid black;
+}
+
+/* .parent > .content:first-of-type {
+    background-color: red;
+} */
+/* .parent > .content {
+    background-color: red;
+} */
+
+.parent > .content:last-child {
+    background-color: red;
 }
