@@ -64,13 +64,62 @@ body {
     border: 1px solid black;
 }
 
-/* .parent > .content:first-of-type {
-    background-color: red;
-} */
-/* .parent > .content {
-    background-color: red;
+/* .card .card__image,
+.card .card__title,
+.card .card__text {
+    border: 1px solid red;
+}
+
+.card :is(.card__image, .card__title, .card__text) {
+    border: 1px solid red;
+}
+
+:is(.card__image, .card__title, .card__text) {
+    border: 1px solid red;
+}
+
+:is(.card__image, .card__title, .card__text) p {
+    border: 1px solid red;
+}
+:is(.card__image, .card__title, .card__text) p:hover {
+    border: 1px solid black;
 } */
 
-.parent > .content:last-child {
-    background-color: red;
+.container {
+    width: 500px;
+    height: 500px;
+    margin: 0 auto;
+    text-align: center;
+
+    border: 1px solid red;
+}
+
+.container .circle-wrapper {
+    width: 250px;
+    height: 250px;
+    margin: calc(50% - 125px) auto;
+    /* overflow: hidden; */
+    
+    border: 1px solid red;
+}
+
+.container .circle-wrapper .circle {
+    width: 210px;
+    height: 210px;
+    border-radius: 50%;
+    border: 20px solid red;
+    transform: rotate(0);
+    transition: transform 1s ease;
+}
+
+.container .circle-wrapper .circle .circle-info {
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    font-weight: bold;
+    line-height: 50px;
+    border-radius: 50%;
+    border: 2px solid black;
+    transform: rotate(0);
+    transition: transform 1s ease;
 }
