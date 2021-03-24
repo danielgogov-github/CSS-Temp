@@ -1,125 +1,153 @@
-body {
+/* body {
     margin: 0;
-    background-color: #f5f5f5;
 }
 
-.wrapper {
-    font-size: 16px;
-    padding: 3em;
-}
-
-.main {
+.flex-container {
     display: flex;
-    justify-content: space-around;  
-    flex-wrap: wrap; 
-    background-color: white;
-}
-
-.card {
-    width: 25em;
-    padding: 2em;
-    text-align: center;
-    box-shadow: 5px 5px 10px gray;
-    border: 1px solid black;
-}
-
-.card__image img {
-    width: 25em;
-}
-
-.card__title {
-    font-size: 24px;
-    padding-top: 1em;
-    padding-bottom: 0.5em; 
-}
-
-.card__text {
-    padding: 1em;    
-}
-
-.card--white {
-    background-color: white;
-    color: black;
-}
-
-.card--black {
-    background-color: black;
-    color: white;
-}
-
-.parent {
-    width: 20em;
-    height: 7.5em;
-    margin: 1em auto;
-    display: flex;
-    justify-content: space-evenly;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
     align-items: center;
-
-    border: 1px solid red;
+    height: 30em;
 }
 
-.parent .header, .parent .content, .parent .footer {
-    width: 4em;
-    height: 4em;
-    border: 1px solid black;
+.flex-item {
+    margin: 1em;
+    padding: 1em;
+    background-color: lightgray;
 }
 
-/* .card .card__image,
-.card .card__title,
-.card .card__text {
-    border: 1px solid red;
+.flex-item.flex-item-one {
+    flex-grow: 0;
+    flex-shrink: 1;
+    flex-basis: 250px;
+    align-self: flex-start;
+    order: 1;
 }
 
-.card :is(.card__image, .card__title, .card__text) {
-    border: 1px solid red;
+.flex-item.flex-item-two {
+    flex-grow: 0;
+    flex-shrink: 2;
+    flex-basis: 250px;
+    align-self: stretch;
+    order: 0;
 }
 
-:is(.card__image, .card__title, .card__text) {
-    border: 1px solid red;
-}
-
-:is(.card__image, .card__title, .card__text) p {
-    border: 1px solid red;
-}
-:is(.card__image, .card__title, .card__text) p:hover {
-    border: 1px solid black;
+.flex-item.flex-item-three {
+    flex-grow: 0;
+    flex-shrink: 1;
+    flex-basis: 250px;
+    align-self: flex-end;
+    order: -1;
 } */
 
-.container {
-    width: 500px;
-    height: 500px;
-    margin: 0 auto;
-    text-align: center;
 
-    border: 1px solid red;
+
+
+@import url('https://fonts.googleapis.com/css?family=Poppins:300,600');
+
+/* 
+white: #FFF;
+green: #0F9;
+black: #444; 
+*/
+
+* { 
+    box-sizing: border-box; 
+    margin-top: 0;
 }
 
-.container .circle-wrapper {
-    width: 250px;
-    height: 250px;
-    margin: calc(50% - 125px) auto;
-    /* overflow: hidden; */
-    
-    border: 1px solid red;
+body {
+    margin: 0;
+  font-family: 'Poppins', sans-serif;
+  color: #444;
+  font-size: 1.1rem;
 }
 
-.container .circle-wrapper .circle {
-    width: 210px;
-    height: 210px;
-    border-radius: 50%;
-    border: 20px solid red;
-    transform: rotate(0);
-    transition: transform 1s ease;
+.hero {
+    height: 100vh;
+    background-color: #444;
+    background-image: url(//unsplash.it/1000/600);
+    background-blend-mode: multiply;
+    background-size: cover;
+    padding: 1em;
+    color: #FFF;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;    
 }
 
-.container .circle-wrapper .circle .circle-info {
-    width: 50px;
-    height: 50px;
-    text-align: center;
-    font-weight: bold;
-    line-height: 50px;
-    border-radius: 50%;
-    border: 2px solid black;
-    transform: rotate(0);
-    transition: transform 1s ease;
+h1 {
+  font-size: 5rem;
+  color: #0F9;
+  text-transform: uppercase;
+  letter-spacing: 15px;
+  outline: 3px solid #FFF;
+  outline-offset: .25em;
+  display: inline-block;
+  margin: 0.25em 0 0.5em;
+  
+}
+h1 span {
+    font-weight: 300;
+}
+
+h2 {
+  font-size: 1.6rem;
+  margin-bottom: 0.5em;
+}
+
+p span {
+    color: #0F9;
+}
+
+.btn {
+  display: inline-block;
+  padding: .7em 1.7em;
+  background: #0F9;
+  color: #444;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.btn:hover {
+    background: darkgreen;
+}
+
+.sales-points {
+  padding: 12vh 0;
+  text-align: center;
+
+  display: flex;
+  flex-direction: row;
+ 
+}
+@media (max-width: 700px) {
+    .sales-points {
+        flex-direction: column;
+    }
+}
+
+
+.cta {
+  background-image: url(//unsplash.it/600/400);
+  background-size: cover;
+  padding: 10vh 0;
+  color: #FFF;
+
+  display: flex;
+  justify-content: flex-end;
+}
+
+.cta-text {
+    flex-basis: 50%;
+    padding: 0 2em;
+}
+@media (max-width: 700px) {
+    .cta-text {
+        flex-basis: 100%;
+        flex-direction: column;
+    }
 }
