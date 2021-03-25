@@ -16,8 +16,7 @@
 //     circleInfo.style.transform = 'rotate(-'+ rotate +'deg)'
 // });
 
-function insertDecimal(num) {
-    return (num / 1000).toFixed(3);
-}
-
-console.log(insertDecimal(1000));
+var gradient = ctx.createLinearGradient(0, 0, 0, 400);
+gradient.addColorStop(0, 'rgba(250,174,50,1)');   
+gradient.addColorStop(1, 'rgba(250,174,50,0)');
+// backgroundColor: gradient,
